@@ -1,0 +1,289 @@
+:root {
+  --color-bg-brown: #8a6e04;
+  --color-bg-light-brown: #f8d238;
+  --color-txt-brown: #f8d238;
+  --color-bg-yellow: #bebe04;
+  --color-bg-light-yellow: #f8f838;
+  --color-txt-yellow: #f8f838;
+}
+.bg-brown {
+  background-color: var(--color-bg-brown);
+}
+.bg-light-brown {
+  background-color: var(--color-bg-light-brown);
+}
+.bg-txt-brown {
+  background-color: var(--color-txt-brown);
+}
+.bg-yellow {
+  background-color: var(--color-bg-yellow);
+}
+.bg-light-yellow {
+  background-color: var(--color-bg-light-yellow);
+}
+.bg-txt-yellow {
+  background-color: var(--color-txt-yellow);
+}
+/*  */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+hr {
+  border: 5px solid var(--color-bg-yellow);
+}
+
+.left {
+  background-color: var(--color-bg-yellow);
+}
+.left .side-menu ul {
+  padding: 10px;
+  margin: 0px;
+  width: 90%;
+}
+.side-menu {
+  position: fixed;
+  top: 0;
+  width: 16.2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.side-menu ul li {
+  list-style: none;
+  padding: 20px;
+  height: 100%;
+}
+.side-menu ul li a {
+  text-decoration: none;
+  color: var(--color-txt-yellow);
+  list-style: none;
+}
+.left .side-menu ul li:hover {
+  background-color: var(--color-bg-light-gray);
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .side-menu {
+    position: relative;
+    top: auto;
+  }
+
+  .left .side-menu ul {
+    padding: 0;
+    height: 100%;
+  }
+
+  .side-menu ul li {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-menu ul li {
+    padding: 15px;
+  }
+}
+
+.right #renkler div {
+  display: flex;
+  justify-content: center;
+}
+.right #renkler .color-blue {
+  border: 2px solid black;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--color-bg-blue);
+  animation: 5s renkDegisBlue infinite;
+}
+@keyframes renkDegisBlue {
+  0% {
+    background-color: var(--color-bg-blue);
+  }
+  33% {
+    background-color: var(--color-bg-light-blue);
+  }
+  66% {
+    background-color: var(--color-txt-blue);
+  }
+}
+.right #renkler .color-green {
+  border: 2px solid black;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--color-bg-green);
+  animation: 5s renkDegisGreen infinite;
+}
+@keyframes renkDegisGreen {
+  0% {
+    background-color: var(--color-bg-green);
+  }
+  33% {
+    background-color: var(--color-bg-light-green);
+  }
+  66% {
+    background-color: var(--color-txt-green);
+  }
+}
+.right #renkler .color-yellow {
+  border: 2px solid black;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--color-bg-yellow);
+  animation: 5s renkDegisYellow infinite;
+}
+@keyframes renkDegisYellow {
+  0% {
+    background-color: var(--color-bg-yellow);
+  }
+  33% {
+    background-color: var(--color-bg-light-yellow);
+  }
+  66% {
+    background-color: var(--color-txt-yellow);
+  }
+}
+.right #renkler .color-orange {
+  border: 2px solid black;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--color-bg-orange);
+  animation: 5s renkDegisOrange infinite;
+}
+@keyframes renkDegisorange {
+  0% {
+    background-color: var(--color-bg-orange);
+  }
+  33% {
+    background-color: var(--color-bg-light-orange);
+  }
+  66% {
+    background-color: var(--color-txt-orange);
+  }
+}
+.right #renkler .color-purple {
+  border: 2px solid black;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--color-bg-purple);
+  animation: 5s renkDegisPurple infinite;
+}
+@keyframes renkDegisPurple {
+  0% {
+    background-color: var(--color-bg-purple);
+  }
+  33% {
+    background-color: var(--color-bg-light-purple);
+  }
+  66% {
+    background-color: var(--color-txt-purple);
+  }
+}
+.right #renkler .color-pink {
+  border: 2px solid black;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--color-bg-pink);
+  animation: 5s renkDegisPink infinite;
+}
+@keyframes renkDegisPink {
+  0% {
+    background-color: var(--color-bg-pink);
+  }
+  33% {
+    background-color: var(--color-bg-light-pink);
+  }
+  66% {
+    background-color: var(--color-txt-pink);
+  }
+}
+.right #renkler .color-brown {
+  border: 2px solid black;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--color-bg-brown);
+  animation: 5s renkDegisBrown infinite;
+}
+@keyframes renkDegisBrown {
+  0% {
+    background-color: var(--color-bg-brown);
+  }
+  33% {
+    background-color: var(--color-bg-light-brown);
+  }
+  66% {
+    background-color: var(--color-txt-brown);
+  }
+}
+.right #renkler .color-gray {
+  border: 2px solid black;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--color-bg-gray);
+  animation: 5s renkDegisGray infinite;
+}
+@keyframes renkDegisGray {
+  0% {
+    background-color: var(--color-bg-gray);
+  }
+  33% {
+    background-color: var(--color-bg-light-gray);
+  }
+  66% {
+    background-color: var(--color-txt-gray);
+  }
+}
+.right #renkler .color-black {
+  border: 2px solid black;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--color-bg-black);
+  animation: 5s renkDegisBlack infinite;
+}
+@keyframes renkDegisBlack {
+  0% {
+    background-color: var(--color-bg-black);
+  }
+  33% {
+    background-color: var(--color-bg-light-black);
+  }
+  66% {
+    background-color: var(--color-txt-black);
+  }
+}
+.right #renkler .color-white {
+  border: 2px solid black;
+  padding: 10px 20px;
+  color: black;
+  background-color: var(--color-bg-white);
+  animation: 5s renkDegisWhite infinite;
+}
+@keyframes renkDegisWhite {
+  0% {
+    background-color: var(--color-bg-white);
+  }
+  33% {
+    background-color: var(--color-bg-light-white);
+  }
+  66% {
+    background-color: var(--color-txt-white);
+  }
+}
+.language-html {
+  display: flex;
+  border: 10px outset var(--color-bg-yellow);
+  padding: 2px 4px;
+  width: 50%;
+}
+.mp-buttons {
+  display: flex;
+}
+.mp-buttons .mp-buttons-items {
+  border: 2px dashed black;
+}

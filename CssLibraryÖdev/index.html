@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="assets/css/library.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="left col-2">
+        <div class="side-menu">
+          <ul>
+            <li><a href="#grid">Grid</a></li>
+            <li><a href="#images">Resim Div</a></li>
+            <li><a href="#overflow">Resim Overflow</a></li>
+            <li><a href="#font-size">Font Boyutları</a></li>
+            <li><a href="#fonts">Yazı Tipleri</a></li>
+            <li><a href="#tablolar">Tablo</a></li>
+            <li><a href="#renkler">Renkler</a></li>
+            <li><a href="#butonlar">Butonlar</a></li>
+            <li><a href="#margin-padding">Margin & Padding</a></li>
+            <li><a href="#slider">Slider</a></li>
+            <li><a href="#menu">Nav Menü</a></li>
+            <li><a href="#form">Form</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="right col-10">
+        <section id="grid">
+          <h3 class="m3"><b>Grid</b></h3>
+          <p class="m3">
+            12'lik grid yapısı oluşturdum ve dökümantasyon sitemi de bu yapı
+            üzerine kurdum. Sol taraftaki sidebar col-2 classını alıp 12'lik
+            blok yapısının 2 birimini kullanıyor. Sağdaki kalan kısım ise col-10
+            değeri ile 10 sütunluk yer kaplıyor.
+          </p>
+        </section>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <section id="renkler">
+          <h3 style="font-size: var(--heading-size-24)" class="m3">Renkler</h3>
+          <br />
+          <p class="m3">
+            10 Farklı renk oluşturdum ve her renge 3 versiyon verdim. Bir tanesi
+            background, bir tanesi background light, diğeri ise text.
+          </p>
+          <div class="color-blue m3">Button</div>
+          <div class="color-green m3">Button</div>
+          <div class="color-yellow m3">Button</div>
+          <div class="color-orange m3">Button</div>
+          <div class="color-purple m3">Button</div>
+          <div class="color-pink m3">Button</div>
+          <div class="color-brown m3">Button</div>
+          <div class="color-gray m3">Button</div>
+          <div class="color-black m3">Button</div>
+          <div class="color-white m3">Button</div>
+          <br /><br />
+          <p class="m3">
+            Yukarıda da görüldüğü üzre 10 rengin üç farklı versiyonunu da 5
+            saniyelik animasyon ile gösterdim.
+          </p>
+          <code class="language-html m5">
+            <span
+              >--color-bg-blue: #0404be; <br />
+              --color-bg-light-blue: #3838f8; <br />
+              --color-txt-blue: #3838f8; <br /><br />
+              .bg-blue { background-color: var(--color-bg-blue) !important; }
+              <br />
+              .txt-blue { color: var(--color-txt-blue) !important; <br />
+              text-shadow: 1px 1px 2px #28262693; } <br />
+              .btn-blue:hover { background-color:
+              var(--color-bg-light-blue)!important; }
+            </span>
+          </code>
+          <p class="m3">
+            Mavi rengin tonlarını ve 0.2 opacity olan versiyonunu
+            (--color-bg-light-blue) nasıl oluşturduğumu paylaştım. Geri kalan
+            renkleri de aynı yukarıdaki örnekteki gibi yaptım.
+          </p>
+        </section>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <section id="fonts" class="m3">
+          <h3>Yazı Tipleri</h3>
+          <br />
+          <p><b>5 yazı tipi oluşturdum:</b></p>
+          <p class="font-times"><i>Times New Roman</i></p>
+          <p class="font-arial"><i>Arial</i></p>
+          <p class="font-georgia"><i>Georgia</i></p>
+          <p class="font-verdana"><i>Verdana</i></p>
+          <p class="font-tahoma"><i>Tahoma</i></p>
+          <code class="language-html m5">
+            <span>
+              --font-times: "Times New Roman", Times, serif;<br />
+              --font-arial: Arial, Helvetica, sans-serif;<br />
+              --font-georgia: Georgia, Times, serif;<br />
+              --font-verdana: Verdana, Geneva, sans-serif;<br />
+              --font-tahoma: Tahoma, Geneva, sans-serif;<br />
+              <br />
+              .font-times {<br />
+              font-family: var(--font-times);<br />
+              }<br />
+              .font-arial {<br />
+              font-family: var(--font-arial);<br />
+              }<br />
+              .font-georgia {<br />
+              font-family: var(--font-georgia);<br />
+              }<br />
+              .font-verdana {<br />
+              font-family: var(--font-verdana);<br />
+              }<br />
+              .font-tahoma {<br />
+              font-family: var(--font-tahoma);<br />
+              }<br />
+            </span>
+          </code>
+          <p>
+            Yukarıdaki css örneğinde fontları değişken olarak alışım ve
+            sonrasında font-family olarak tanımlamamı gösterdim.
+          </p>
+        </section>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <section id="font-size" class="m3">
+          <h3><b>Font Boyutları</b></h3>
+          <p>
+            Toplamda 15 yazı tipi boyutu oluşturdum. Bunlardan 10 tanesi normal
+            font, 5 tanesi ise başlık fontu.
+          </p>
+          <br />
+          <h4><b>Metin Boyutları:</b></h4>
+          <p class="font-size-8">font-size-8</p>
+          <p class="font-size-10">font-size-10</p>
+          <p class="font-size-12">font-size-12</p>
+          <p class="font-size-14">font-size-14</p>
+          <p class="font-size-16">font-size-16</p>
+          <p class="font-size-18">font-size-18</p>
+          <p class="font-size-20">font-size-20</p>
+          <p class="font-size-22">font-size-22</p>
+          <p class="font-size-24">font-size-24</p>
+          <p class="font-size-26">font-size-26</p>
+          <br />
+          <h4><b>Başlık Boyutları:</b></h4>
+          <p class="heading-size-24"><b>heading-size-24</b></p>
+          <p class="heading-size-28"><b>heading-size-28</b></p>
+          <p class="heading-size-32"><b>heading-size-32</b></p>
+          <p class="heading-size-36"><b>heading-size-36</b></p>
+          <p class="heading-size-40"><b>heading-size-40</b></p>
+          <br />
+          <code class="language-html m5">
+            <span>
+              root:{<br />
+              --font-size-8: 8px;<br />
+              --font-size-10: 10px;<br />
+              --font-size-12: 12px;<br />
+              --font-size-14: 14px;<br />
+              --font-size-16: 16px;<br />
+              --font-size-16: 16px;<br />
+              --font-size-18: 18px;<br />
+              --font-size-20: 20px;<br />
+              --font-size-22: 22px;<br />
+              --font-size-24: 24px;<br />
+              --font-size-26: 26px;<br />
+              <br />
+              --heading-size-24: 24px;<br />
+              --heading-size-28: 28px;<br />
+              --heading-size-32: 32px;<br />
+              --heading-size-36: 36px;<br />
+              --heading-size-40: 40px;<br />
+              }<br />
+              <br />
+              .font-size-8 {<br />
+              font-size: var(--font-size-8);<br />
+              }<br />
+              .font-size-10 {<br />
+              font-size: var(--font-size-10);<br />
+              }<br />
+              .font-size-12 {<br />
+              font-size: var(--font-size-12);<br />
+              }<br />
+              .font-size-14 {<br />
+              font-size: var(--font-size-14);<br />
+              }<br />
+              .font-size-16 {<br />
+              font-size: var(--font-size-16);<br />
+              }<br />
+              .font-size-18 {<br />
+              font-size: var(--font-size-18);<br />
+              }<br />
+              .font-size-20 {<br /><br />
+              font-size: var(--font-size-20);<br />
+              }<br />
+              .font-size-22 {<br />
+              font-size: var(--font-size-22);<br />
+              }<br />
+              .font-size-24 {<br />
+              font-size: var(--font-size-24);<br />
+              }<br />
+              .font-size-26 {<br />
+              font-size: var(--font-size-26);<br />
+              }<br />
+              <br />
+              .heading-size-24 {<br />
+              font-size: var(--heading-size-24);<br />
+              }<br />
+              <br />
+              .heading-size-28 {<br />
+              font-size: var(--heading-size-28);<br />
+              }<br />
+              <br />
+              .heading-size-32 {<br />
+              font-size: var(--heading-size-32);<br />
+              }<br />
+              <br />
+              .heading-size-36 {<br />
+              font-size: var(--heading-size-36);<br />
+              }<br />
+              <br />
+              .heading-size-40 {<br />
+              font-size: var(--heading-size-40);<br />
+              }<br />
+            </span>
+          </code>
+          <p>
+            Yukarıdaki css örneğinde font boyutlarını değişken olarak alışım ve
+            sonrasında font-size olarak tanımlamamı gösterdim.
+          </p>
+        </section>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <section id="margin-padding">
+          <h3 class="m3"><b>Margin & Padding</b></h3>
+          <p class="m3">
+            Bu bölümde ise yukarıdan, aşağıdan, sağdan ve soldan padding
+            değerlerini kolaylaştırmak ve clean code mantalitesinde olması
+            açısından mp değerleri verdim.
+          </p>
+          <div class="mp-buttons m3">
+            <div class="m0 mp-buttons-items">m0</div>
+            <div class="m1 mp-buttons-items">m1</div>
+            <div class="m2 mp-buttons-items">m2</div>
+            <div class="m3 mp-buttons-items">m3</div>
+            <div class="m4 mp-buttons-items">m4</div>
+            <div class="m5 mp-buttons-items">m5</div>
+            <div class="p5 mp-buttons-items">p5</div>
+            <div class="p4 mp-buttons-items">p4</div>
+            <div class="p3 mp-buttons-items">p3</div>
+            <div class="p2 mp-buttons-items">p2</div>
+            <div class="p1 mp-buttons-items">p1</div>
+            <div class="p0 mp-buttons-items">p0</div>
+          </div>
+          <div class="mp-buttons m3">
+            <div class="mt0 mp-buttons-items">mt0</div>
+            <div class="mt1 mp-buttons-items">mt1</div>
+            <div class="mt2 mp-buttons-items">mt1</div>
+            <div class="mt3 mp-buttons-items">mt3</div>
+            <div class="mt4 mp-buttons-items">mt4</div>
+            <div class="mt5 mp-buttons-items">mt5</div>
+            <div class="mb0 mp-buttons-items">mb0</div>
+            <div class="mb1 mp-buttons-items">mb1</div>
+            <div class="mb2 mp-buttons-items">mb2</div>
+            <div class="mb3 mp-buttons-items">mb3</div>
+            <div class="mb4 mp-buttons-items">mb4</div>
+            <div class="mb5 mp-buttons-items">mt5</div>
+          </div>
+          <code class="language-html m5">
+            <span
+              >:root { <br />
+              --mp0: 0px; <br />
+              --mp1: 5px;<br />
+              --mp2: 10px;<br />
+              --mp3: 15px;<br />
+              --mp4: 20px;<br />
+              --mp5: 25px;<br />
+              }<br />
+              <br />
+              .m0 {<br />
+              margin: var(--mp0);<br />
+              }<br />
+              .mr0 {<br />
+              margin-right: var(--mp0);<br />
+              }<br />
+              .ml0 {<br />
+              margin-left: var(--mp0);<br />
+              }<br />
+              .mt0 {<br />
+              margin-top: var(--mp0);<br />
+              }<br />
+              .mb0 {<br />
+              margin-bottom: var(--mp0);<br />
+              }<br />
+            </span>
+          </code>
+          <p class="m3">
+            Yukarıdaki örnekteki kod gibi yazmış olduğum
+            <i>mp0, mp1, mp2 mp3, mp4, mp5</i> variableları üzerinden margin ve
+            padding değerleri tanımladım.
+          </p>
+        </section>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <section id="slider">
+          <div class="slider-container">
+            <figure>
+              <div class="slide">
+                <img
+                  src="https://www.wonderplugin.com/wp-content/uploads/2019/05/sydney-opera-house.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://cssslider.com/sliders/demo-17/data1/images/picjumbo.com_hanv9909.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://cssslider.com/sliders/demo-17/data1/images/picjumbo.com_img_6122.jpg"
+                  alt=""
+                />
+              </div>
+            </figure>
+          </div>
+          <h3 class="m3"><b>Slider 1</b></h3>
+          <p class="m3">Yukarıda 3 görseli kayan bir slider tasarımı yaptım.</p>
+          <div class="slider1">
+            <div class="slider1-picture">
+              <img
+                src="https://www.wonderplugin.com/wp-content/uploads/2019/05/sydney-opera-house.jpg"
+                alt=""
+              />
+            </div>
+            <div class="slider1-items">
+              <div class="slider1-item1">
+                <img src="assets/images/caret-left-fill.svg" alt="" />
+              </div>
+              <div class="slider1-item2">
+                <img src="assets/images/caret-right-fill.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <h3 class="m3"><b>Slider 2</b></h3>
+          <p class="m3">
+            Yukarıdaki tasarımımda sliderın sol ve sağ taraflarına bootsrap
+            üzerinden almış olduğum okları koydum. Bir işlevleri olmasa bile
+            sağa ve sola hareket edecekmiş gibi bir görüntü sağlıyor.
+          </p>
+          <div class="slider2">
+            <img
+              src="https://cssslider.com/sliders/demo-17/data1/images/picjumbo.com_img_6122.jpg"
+              alt=""
+            />
+            <div class="slider2-items">
+              <div class="slider2-item1">
+                <img src="assets/images/caret-left-fill.svg" alt="" />
+              </div>
+              <div class="slider2-item2">
+                <img src="assets/images/caret-right-fill.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <h3 class="m3"><b>Slider 3</b></h3>
+          <p class="m3">
+            Yukarıdaki tasarımımda sliderın üst ve alt taraflarına bootsrap
+            üzerinden almış olduğum okları koydum. Bir işlevleri olmasa bile
+            sağa ve sola hareket edecekmiş gibi bir görüntü sağlıyor.
+          </p>
+        </section>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <section id="tablolar" class="m3">
+          <div>
+            <h3><b>Tablolar</b></h3>
+            <h4><b>Responsive Tablo</b></h4>
+            <table class="responsive-table">
+              <tr>
+                <th>Başlık 1</th>
+                <th>Başlık 2</th>
+                <th>Başlık 3</th>
+              </tr>
+              <tr>
+                <td>İçerik 1</td>
+                <td>İçerik 2</td>
+                <td>İçerik 3</td>
+              </tr>
+              <tr>
+                <td>İçerik 1</td>
+                <td>İçerik 2</td>
+                <td>İçerik 3</td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <h4><b>Bordered Tablo</b></h4>
+            <table class="bordered-table">
+              <tr>
+                <th>Başlık 1</th>
+                <th>Başlık 2</th>
+                <th>Başlık 3</th>
+              </tr>
+              <tr>
+                <td>İçerik 1</td>
+                <td>İçerik 2</td>
+                <td>İçerik 3</td>
+              </tr>
+              <tr>
+                <td>İçerik 1</td>
+                <td>İçerik 2</td>
+                <td>İçerik 3</td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <h4><b>Striped Tablo</b></h4>
+            <table class="striped-table">
+              <tr>
+                <th>Başlık 1</th>
+                <th>Başlık 2</th>
+                <th>Başlık 3</th>
+              </tr>
+              <tr>
+                <td>İçerik 1</td>
+                <td>İçerik 2</td>
+                <td>İçerik 3</td>
+              </tr>
+              <tr>
+                <td>İçerik 1</td>
+                <td>İçerik 2</td>
+                <td>İçerik 3</td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <h4><b>Hoverable Tablo</b></h4>
+            <table class="hoverable-table">
+              <tr>
+                <th>Başlık 1</th>
+                <th>Başlık 2</th>
+                <th>Başlık 3</th>
+              </tr>
+              <tr>
+                <td>İçerik 1</td>
+                <td>İçerik 2</td>
+                <td>İçerik 3</td>
+              </tr>
+              <tr>
+                <td>İçerik 1</td>
+                <td>İçerik 2</td>
+                <td>İçerik 3</td>
+              </tr>
+            </table>
+          </div>
+          <code class="language-html m5">
+            <span>
+              overflow-x: auto;<br />
+              .responsive-table {<br />
+              border: 2px solid black;<br />
+              width: auto;<br />
+              }<br />
+              .responsive-table th {<br />
+              height: 40px;<br />
+              text-align: left;<br />
+              vertical-align: middle;<br />
+              }<br />
+              .responsive-table th,<br />
+              .responsive-table td {<br />
+              padding: 10px;<br />
+              text-align: left;<br />
+              }<br />
+              .bordered-table {<br />
+              border-collapse: collapse;<br />
+              margin-top: var(--mp4);<br />
+              border: 1px solid var(--color-bg-black);<br />
+              width: 100%;<br />
+              }<br />
+              .bordered-table th {<br />
+              height: 70px;<br />
+              text-align: left;<br />
+              vertical-align: middle;<br />
+              }<br />
+              .bordered-table th,<br />
+              .bordered-table td {<br />
+              padding: 10px;<br />
+              text-align: left;<br />
+              border-bottom: 1px solid var(--color-bg-light-orange);<br />
+              }<br />
+              .striped-table tbody tr:nth-child(odd) {<br />
+              background-color: var(--color-bg-light-purple);<br />
+              cursor: pointer;<br />
+              }<br />
+              .striped-table {<br />
+              width: 100%;<br />
+              border: 2px solid var(--color-bg-purple);<br />
+              margin-top: var(--mp4);<br />
+              }<br />
+              .striped-table th {<br />
+              padding: 10px;<br />
+              text-align: center;<br />
+              }<br />
+              .striped-table td {<br />
+              text-align: left;<br />
+              }<br />
+              .hoverable-table {<br />
+              margin-top: var(--mp4);<br />
+              width: 100%;<br />
+              border: 2px solid var(--color-bg-green);<br />
+              }<br />
+              .hoverable-table th {<br />
+              padding: 10px;<br />
+              text-align: left;<br />
+              }<br />
+              .hoverable-table th,<br />
+              .hoverable-table td {<br />
+              border: 1px solid var(--color-bg-green);<br />
+              }<br />
+              .hoverable-table tbody tr:hover {<br />
+              background-color: var(--color-bg-light-green);<br />
+              cursor: pointer;<br />
+              }<br />
+            </span>
+          </code>
+          <p>
+            Yukarıdaki tablolarda ise responsive, bordered, striped, hoverable
+            tablo olmak üzere toplam dört tablo çeşidine yer verdim.
+          </p>
+        </section>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <section id="butonlar" class="m3">
+          <h3><b>Butonlar</b></h3>
+          <div class="butonlar">
+            <div class="buton">
+              <section class="button-orange">
+                <div class="btn-outline">Bu bir butondur</div>
+                <div class="btn">Bu ikinci butondur</div>
+              </section>
+              <section class="button-green">
+                <div class="btn-outline">Bu bir butondur</div>
+                <div class="btn">Bu ikinci butondur</div>
+              </section>
+              <section class="button-red">
+                <div class="btn-outline">Bu bir butondur</div>
+                <div class="btn">Bu ikinci butondur</div>
+              </section>
+              <section class="button-blue">
+                <div class="btn-outline">Bu bir butondur</div>
+                <div class="btn">Bu ikinci butondur</div>
+              </section>
+              <section class="button-yellow">
+                <div class="btn-outline">Bu bir butondur</div>
+                <div class="btn">Bu ikinci butondur</div>
+              </section>
+            </div>
+            <div class="buton">
+              <section class="button-purple">
+                <div class="btn-outline">Bu bir butondur</div>
+                <div class="btn">Bu ikinci butondur</div>
+              </section>
+              <section class="button-pink">
+                <div class="btn-outline">Bu bir butondur</div>
+                <div class="btn">Bu ikinci butondur</div>
+              </section>
+              <section class="button-brown">
+                <div class="btn-outline">Bu bir butondur</div>
+                <div class="btn">Bu ikinci butondur</div>
+              </section>
+              <section class="button-gray">
+                <div class="btn-outline">Bu bir butondur</div>
+                <div class="btn">Bu ikinci butondur</div>
+              </section>
+              <section class="button-black">
+                <div class="btn-outline">Bu bir butondur</div>
+                <div class="btn">Bu ikinci butondur</div>
+              </section>
+            </div>
+          </div>
+          <code class="language-html m5">
+            <span>
+              .butonlar {<br />
+              width: 100%;<br />
+              display: flex;<br />
+              justify-content: center;<br />
+              }<br />
+              .buton {<br />
+              margin: var(--mp2);<br />
+              }<br />
+              .button-orange {<br />
+              display: flex;<br />
+              }<br />
+
+              .button-orange .btn-outline {<br />
+              padding: 10px 20px;<br />
+              border: 2px solid var(--color-btn-light-brown);<br />
+              border-radius: 5px 5px;<br />
+              color: var(--color-txt-black);<br />
+              background-color: var(--color-btn-light-orange);<br />
+              transition: background-color 0.3s ease, color 0.3s ease;<br />
+              cursor: pointer;<br />
+              margin-right: var(--mp2);<br />
+              }<br />
+              .button-orange .btn-outline:hover {<br />
+              background-color: var(--color-btn-orange);<br />
+              color: var(--color-txt-white);<br />
+              }<br />
+              .button-orange .btn {<br />
+              padding: 10px 20px;<br />
+              border: 2px solid var(--color-btn-light-brown);<br />
+              color: var(--color-txt-black);<br />
+              background: var(--color-btn-light-brown);<br />
+              transition: background-color 0.3 ease, color 0.3 ease;<br />
+              cursor: pointer;<br />
+              }<br />
+              .button-orange .btn:hover {<br />
+              background-color: var(--color-btn-orange);<br />
+              color: var(--color-txt-white);<br />
+              }<br />
+            </span>
+          </code>
+          <p>
+            Yukarıdaki css komutlarında turuncu butonları nasıl yaptığımı
+            gösteriyorum. İlk başta bizden istenen 0.2 opaklıkta buton rengini
+            yakalamak için o renge özel bir "light" renk tonu değişkeni atadım.
+            Daha sonrasında ise hover ile üzerlerine gelinince rengin 1 opaklığa
+            gelmesini sağladım. Border-radius kısmında da hem olan hem de
+            olmayan çeşitlere yer verdim. Bunlara ek olarak ise 10 farklı renk
+            skalasını, "light" ve "text" olarak da buton renkleri adı altında
+            değişken olarak tanımladım.
+          </p>
+        </section>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <h3 class="m3"><b>Overflow Resimler</b></h3>
+        <section id="overflow" class="m3">
+          <div class="resim-ortali">
+            <img
+              src="https://images5.alphacoders.com/125/1257951.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="resim-yukseklik-ortali">
+            <img
+              src="https://images5.alphacoders.com/125/1257951.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="resim-genislik-ortali">
+            <img
+              src="https://images5.alphacoders.com/125/1257951.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="resim-orijinal">
+            <img
+              src="https://images5.alphacoders.com/125/1257951.jpeg"
+              alt=""
+            />
+          </div>
+        </section>
+        <code class="language-html m5">
+          <span>
+            #overflow {<br />
+            display: flex;<br />
+            gap: 10px;<br />
+            justify-content: center;<br />
+            }<br />
+            .resim-ortali {<br />
+            width: calc(100% / 4);<br />
+            overflow-x: scroll;<br />
+            overflow-y: hidden;<br />
+            height: 200px;<br />
+            }<br />
+            .resim-ortali img {<br />
+            height: 400px;<br />
+            }<br />
+            .resim-yukseklik-ortali {<br />
+            width: calc(100% / 4);<br />
+            overflow-x: hidden;<br />
+            overflow-y: scroll;<br />
+            height: 200px;<br />
+            }<br />
+            .resim-yukseklik-ortali img {<br />
+            height: 400px;<br />
+            }<br />
+            .resim-genislik-ortali {<br />
+            width: calc(100% / 4);<br />
+            overflow-x: scroll;<br />
+            overflow-y: scroll;<br />
+            height: 200px;<br />
+            }<br />
+            .resim-genislik-ortali img {<br />
+            height: 400px;<br />
+            }<br />
+            .resim-orijinal {<br />
+            width: calc(100% / 4);<br />
+            overflow-x: hidden;<br />
+            overflow-y: hidden;<br />
+            height: 200px;<br />
+            }<br />
+            .resim-orijinal img {<br />
+            height: 400px;<br />
+            }<br />
+          </span>
+        </code>
+        <p class="m3">
+          Bu alanda ise overflow resimleri gösterdim. Oppenheimer filminin
+          afişini kullandığım sectionda ilk resim x eksininde scrollanırken
+          ikinci resim ise y ekseninde scrollanıyor. Üçüncü resim ise iki
+          eksende de scrollanıyor. Dördüncü resimde ise her iki eksende
+          scrollama hidden olarak işaretlendiği için bir scroll bar görünmüyor.
+        </p>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <section id="menu" class="m3">
+          <h3>
+            <p>Inline, Block ve Dropdown Menü</p>
+          </h3>
+          <div class="inline-menu">
+            <ul>
+              <li><a href="#">Ana Sayfa</a></li>
+              <li class="dropdown-menu-wrapper">
+                <a href="#">Hakkımızda</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Twitter</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Hizmetler</a></li>
+              <li><a href="#">Ürünler</a></li>
+              <li><a href="#">İletişim</a></li>
+            </ul>
+          </div>
+          <div class="block-menu">
+            <ul>
+              <li><a href="#">Ana Sayfa</a></li>
+              <li><a href="#">Hakkımızda</a></li>
+              <li><a href="#">Hizmetler</a></li>
+              <li><a href="#">Ürünler</a></li>
+              <li><a href="#">İletişim</a></li>
+            </ul>
+          </div>
+        </section>
+        <code class="language-html m5">
+          <span>
+            .inline-menu {<br />
+            background-color: var(--color-btn-light-yellow);<br />
+            width: 100%;<br />
+            height: 70px;<br />
+            color: var(--color-btn-txt-yellow);<br />
+            font-family: var(--font-tahoma);<br />
+            font-size: var(--heading-size-24);<br />
+            display: flex;<br />
+            justify-content: end;<br />
+            align-items: center;<br />
+            vertical-align: middle;<br />
+            }<br />
+            .inline-menu > ul {<br />
+            margin: var(--mp0);<br />
+            height: 100%;<br />
+            display: flex;<br />
+            align-items: center;<br />
+            }<br />
+
+            .inline-menu ul li {<br />
+            display: flex;<br />
+            align-items: center;<br />
+            padding: 0 20px;<br />
+            border-left: 1px solid black;<br />
+            height: calc(100% - 20px);<br />
+            }<br />
+            .inline-menu ul li a {<br />
+            text-decoration: none;<br />
+            color: var(--color-txt-black);<br />
+            }<br />
+            .inline-menu ul li:last-child {<br />
+            margin-right: var(--mp0);<br />
+            }<br />
+            .dropdown-menu-wrapper {<br />
+            position: relative;<br />
+            }<br />
+            .dropdown-menu {<br />
+            position: absolute;<br />
+            display: none;<br />
+            flex-direction: column;<br />
+            align-items: flex-start !important;<br />
+            top: 100%;<br />
+            left: 0;<br />
+            padding: 0;<br />
+            height: auto;<br />
+            width: 100%;<br />
+            gap: 10px;<br />
+            background-color: var(--color-btn-light-yellow);<br />
+            }<br />
+            .dropdown-menu li {<br />
+            border-left: none !important;<br />
+            }<br />
+            .dropdown-menu-wrapper:hover .dropdown-menu {<br />
+            display: flex;<br />
+            }<br />
+            .block-menu {<br />
+            margin-top: 150px !important;<br />
+            background-color: var(--color-btn-light-yellow);<br />
+            width: 100%;<br />
+            height: auto;<br />
+            color: var(--color-btn-txt-yellow);<br />
+            font-family: var(--font-tahoma);<br />
+            font-size: var(--heading-size-24);<br />
+            display: block;<br />
+            text-align: center;<br />
+            margin: var(--mp0);<br />
+            }<br />
+            .block-menu ul {<br />
+            padding: 0 20px;<br />
+            list-style: none;<br />
+            }<br />
+            .block-menu ul li:last-child {<br />
+            border-bottom: none;<br />
+            }<br />
+            .block-menu ul li {<br />
+            border-bottom: 1px solid black;<br />
+            padding: 10px;<br />
+            }<br />
+            .block-menu ul li a {<br />
+            text-decoration: none;<br />
+            color: var(--color-btn-txt-yellow);<br />
+            }<br />
+          </span>
+        </code>
+        <p class="m5">
+          Bu sectionda ise inline, block ve dropdown menüleri beraber yapmak
+          istedim. Üstteki inline menü "border-left" alarak linkler arasında
+          fark olduğunu belli ediyor. Aynı zamanda hakkımızda kısmına hover
+          yapıldığında dropdown menü beliriyor.
+        </p>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <section id="form" class="m3">
+          <h3><b>Formlar</b></h3>
+          <form action="#">
+            <input type="text" class="form-elemani" placeholder="Adınız" />
+            <input type="email" class="form-elemani" placeholder="E-posta" />
+            <input
+              type="tel"
+              class="form-elemani"
+              placeholder="Cep Telefon Numarası"
+            />
+            <textarea
+              class="form-elemani"
+              rows="4"
+              placeholder="Mesajınız"
+            ></textarea>
+            <button type="submit" class="button">Gönder</button>
+          </form>
+          <code class="language-html">
+            <span>
+              form {<br />
+              width: 25%;<br />
+              display: flex;<br />
+              flex-direction: column;<br />
+              }<br />
+              .form-elemani {<br />
+              padding: 10px;<br />
+              margin-bottom: var(--mp3);<br />
+              border: 1px solid var(--color-txt-gray);<br />
+              border-radius: 5px;<br />
+              font-size: var(--font-size-16);<br />
+              font-family: var(--font-verdana);<br />
+              }<br />
+              .form-elemani:focus {<br />
+              border-color: var(--color-txt-gray);<br />
+              outline: none;<br />
+              box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);<br />
+              }<br />
+              .button {<br />
+              padding: 10px;<br />
+              margin-bottom: var(--mp3);<br />
+              border: 1px solid var(--color-txt-gray);<br />
+              border-radius: 5px;<br />
+              font-size: var(--font-size-16);<br />
+              font-family: var(--font-verdana);<br />
+              background-color: var(--color-bg-light-gray);<br />
+              opacity: 0.5;<br />
+              cursor: pointer;<br />
+              }<br />
+              .button:hover {<br />
+              background-color: var(--color-bg-light-gray);<br />
+              opacity: 1;<br />
+              }<br />
+            </span>
+          </code>
+          <p>
+            Burada da basit bir form yapısı oluşturdum. Ad-Soyad, Telefon
+            Numarası, E-posta ve mesajı soran bir iletişim kutusu.
+          </p>
+        </section>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <section id="images">
+          <h3 class="m3">
+            <p>Resim Divleri</p>
+          </h3>
+          <section class="normal-image">
+            <div class="section-content">
+              <div class="image1">
+                <img
+                  src="https://media.vogue.co.uk/photos/60538d2bd4f5db6cd813d095/1:1/w_4480,h_4480,c_limit/Justin-Bieber-vogue-credit-Mike-Rosenthal-1.jpg"
+                  alt=""
+                />
+                <h3>Başlık</h3>
+                <p>Açıklama</p>
+                <a href="#" class="image-detay-button">Detay</a>
+              </div>
+            </div>
+            <div class="section-content">
+              <div class="image1">
+                <img
+                  src="https://media.vogue.co.uk/photos/60538d2bd4f5db6cd813d095/1:1/w_4480,h_4480,c_limit/Justin-Bieber-vogue-credit-Mike-Rosenthal-1.jpg"
+                  alt=""
+                />
+                <h3>Başlık</h3>
+                <p>Açıklama</p>
+                <a href="#" class="image-detay-button">Detay</a>
+              </div>
+            </div>
+            <div class="section-content">
+              <div class="image1">
+                <img
+                  src="https://media.vogue.co.uk/photos/60538d2bd4f5db6cd813d095/1:1/w_4480,h_4480,c_limit/Justin-Bieber-vogue-credit-Mike-Rosenthal-1.jpg"
+                  alt=""
+                />
+                <h3>Başlık</h3>
+                <p>Açıklama</p>
+                <a href="#" class="image-detay-button">Detay</a>
+              </div>
+            </div>
+            <div class="section-content">
+              <div class="image1">
+                <img
+                  src="https://media.vogue.co.uk/photos/60538d2bd4f5db6cd813d095/1:1/w_4480,h_4480,c_limit/Justin-Bieber-vogue-credit-Mike-Rosenthal-1.jpg"
+                  alt=""
+                />
+                <h3>Başlık</h3>
+                <p>Açıklama</p>
+                <a href="#" class="image-detay-button">Detay</a>
+              </div>
+            </div>
+          </section>
+          <section class="normal-image">
+            <div class="section-content">
+              <div class="image2">
+                <img
+                  src="https://yt3.googleusercontent.com/ytc/APkrFKa9UGCuQ1IgMpmCGrWZp85Z0fEM1Rlp7NCRxdtLIw=s900-c-k-c0x00ffffff-no-rj"
+                  alt=""
+                />
+                <h3>Başlık</h3>
+                <p>Açıklama</p>
+                <a href="#" class="image-detay-button">Detay</a>
+              </div>
+            </div>
+            <div class="section-content">
+              <div class="image2">
+                <img
+                  src="https://yt3.googleusercontent.com/ytc/APkrFKa9UGCuQ1IgMpmCGrWZp85Z0fEM1Rlp7NCRxdtLIw=s900-c-k-c0x00ffffff-no-rj"
+                  alt=""
+                />
+                <h3>Başlık</h3>
+                <p>Açıklama</p>
+                <a href="#" class="image-detay-button">Detay</a>
+              </div>
+            </div>
+            <div class="section-content">
+              <div class="image2">
+                <img
+                  src="https://yt3.googleusercontent.com/ytc/APkrFKa9UGCuQ1IgMpmCGrWZp85Z0fEM1Rlp7NCRxdtLIw=s900-c-k-c0x00ffffff-no-rj"
+                  alt=""
+                />
+                <h3>Başlık</h3>
+                <p>Açıklama</p>
+                <a href="#" class="image-detay-button">Detay</a>
+              </div>
+            </div>
+            <div class="section-content">
+              <div class="image2">
+                <img
+                  src="https://yt3.googleusercontent.com/ytc/APkrFKa9UGCuQ1IgMpmCGrWZp85Z0fEM1Rlp7NCRxdtLIw=s900-c-k-c0x00ffffff-no-rj"
+                  alt=""
+                />
+                <h3>Başlık</h3>
+                <p>Açıklama</p>
+                <a href="#" class="image-detay-button">Detay</a>
+              </div>
+            </div>
+          </section>
+        </section>
+        <code class="language-html m5">
+          <span>
+            #images {<br />
+            display: flex;<br />
+            width: 100%;<br />
+            float: left;<br />
+            }<br />
+            #images .normal-image {<br />
+            width: calc(100% - var(--mp3));<br />
+            }<br />
+            #images .normal-image .section-content {<br />
+            float: left;<br />
+            }<br />
+            #images .normal-image .section-content .image1,<br />
+            #images .normal-image .section-content .image2 {<br />
+            height: 300px;<br />
+            position: relative;<br />
+            margin: var(--mp2);<br />
+            margin-bottom: 150px;<br />
+            }<br />
+            #images .normal-image .section-content .image2 {<br />
+            border-radius: 10%;<br />
+            }<br />
+            #images .normal-image .section-content .image1 img,<br />
+            #images .normal-image .section-content .image2 img {<br />
+            width: inherit;<br />
+            height: inherit;<br />
+            border-radius: inherit;<br />
+            }<br />
+            #images .normal-image .section-content .image1 h3,<br />
+            #images .normal-image .section-content .image2 h3 {<br />
+            color: var(--color-txt-orange);<br />
+            margin-bottom: var(--mp0);<br />
+            }<br />
+            #images .normal-image .section-content .image1 p,<br />
+            #images .normal-image .section-content .image2 p {<br />
+            color: var(--color-btn-txt-orange);<br />
+            margin-top: var(--mp1);<br />
+            margin-bottom: var(--mp4);<br />
+            }<br />
+            #images .image-detay-button {<br />
+            text-decoration: none;<br />
+            padding: 10px 20px;<br />
+            border-radius: 8%;<br />
+            background-color: var(--color-btn-orange);<br />
+            color: var(--color-btn-txt-orange);<br />
+            }<br />
+            #images .image-detay-button:hover {<br />
+            background-color: var(--color-btn-light-orange);<br />
+            }<br />
+          </span>
+        </code>
+        <p class="m5">
+          Burada da 4'er fotoğraftan oluşan iki farklı resim divi yaptım. Bir
+          tanesi normal kenarlı, diğeri border radiuslu. Resimler otomatik
+          olarak çerçevenin boyutunu alıyorlar.
+        </p>
+        <h1 style="display: flex; justify-content: center">Teşekkürler!</h1>
+      </div>
+    </div>
+  </body>
+</html>
